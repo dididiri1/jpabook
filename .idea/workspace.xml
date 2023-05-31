@@ -4,22 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db6a5f0e-d9e8-4cd8-8c50-341a8d706bd3" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch07-model1/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch07-model1/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch07-model1/src/main/java/hellojpa/Album.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch07-model1/src/main/java/hellojpa/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch07-model1/src/main/java/hellojpa/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch07-model1/src/main/java/hellojpa/JpaMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch07-model1/src/main/java/hellojpa/Movie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch07-model1/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+    <list default="true" id="db6a5f0e-d9e8-4cd8-8c50-341a8d706bd3" name="Changes" comment="ch07 model1 add">
+      <change afterPath="$PROJECT_DIR$/ch09-model1/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch09-model1/src/main/java/hellojpa/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch09-model1/src/main/java/hellojpa/JpaMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch09-model1/src/main/java/hellojpa/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch09-model1/src/main/java/hellojpa/Period.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch09-model1/src/main/java/hellojpa/ValueMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch09-model1/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch09-model2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch09-model2/src/main/java/hellojpa/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch09-model2/src/main/java/hellojpa/JpaMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch09-model2/src/main/java/hellojpa/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch09-model2/src/main/java/hellojpa/Period.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch09-model2/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/09_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/09_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study/09_value_type.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -44,7 +61,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "/Users/kangmin/IdeaProjects/jpabook/ch07-model1/src/main/java",
+    "last_opened_file_path": "/Users/kangmin/IdeaProjects/jpabook/ch09-model2/src/main/java",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,27 +75,17 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/ch09-model1/src/main/java" />
+      <recent name="$PROJECT_DIR$/ch09-model1/src/main/resources" />
+      <recent name="$PROJECT_DIR$/study" />
       <recent name="$PROJECT_DIR$/ch07-model1/src/main/java" />
-      <recent name="$PROJECT_DIR$/ch07-model1/src/main/resources" />
-      <recent name="$PROJECT_DIR$/ch07-model1" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/ch05-model1" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="hellojpa" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.JpaMain (4)">
-    <configuration name="JpaMain (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hellojpa.JpaMain" />
-      <module name="ch06-model1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hellojpa.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.JpaMain">
     <configuration name="JpaMain (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hellojpa.JpaMain" />
       <module name="ch06-model3" />
@@ -120,7 +127,20 @@
     </configuration>
     <configuration name="JpaMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hellojpa.JpaMain" />
-      <module name="ch06-model2" />
+      <module name="ch09-model1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hellojpa.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValueMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hellojpa.ValueMain" />
+      <module name="ch09-model1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="hellojpa.*" />
@@ -133,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JpaMain" />
+        <item itemvalue="Application.ValueMain" />
         <item itemvalue="Application.JpaMain (4)" />
         <item itemvalue="Application.JpaMain (3)" />
         <item itemvalue="Application.JpaMain (2)" />
-        <item itemvalue="Application.JpaMain (1)" />
-        <item itemvalue="Application.JpaMain" />
       </list>
     </recent_temporary>
   </component>
@@ -149,8 +169,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1685499547932</updated>
-      <workItem from="1685499548997" duration="4556000" />
+      <workItem from="1685499548997" duration="9910000" />
+      <workItem from="1685514126628" duration="906000" />
+      <workItem from="1685515036717" duration="208000" />
+      <workItem from="1685515246862" duration="425000" />
+      <workItem from="1685515674985" duration="312000" />
     </task>
+    <task id="LOCAL-00001" summary="ch07 model1 add">
+      <created>1685505369907</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685505369907</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ch07 model1 add">
+      <created>1685505419573</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685505419573</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +208,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="ch07 model1 add" />
+    <option name="LAST_COMMIT_MESSAGE" value="ch07 model1 add" />
   </component>
 </project>
