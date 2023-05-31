@@ -25,11 +25,16 @@ public class JpaMain {
 
             em.persist(member1);
 
+            // 값 복사해서 새로운 객체 생성
+            Address copyAddress = new Address(address.getCity(), address.getStreet(), address.getZipcode());
+
             Member member2 = new Member();
             member2.setUsername("member2");
-            member2.setHomeAddress(address);
+            member2.setHomeAddress(copyAddress);
 
             em.persist(member2);
+
+            member1.getHomeAddress().setCity("newCity");
 
             tx.commit();
         } catch (Exception e) {
