@@ -80,10 +80,10 @@
 
 * 공통적으로 객체화 할때
 
-![](https://github.com/dididiri1/jpabook/images/09_01.png?raw=true)
+![](https://github.com/dididiri1/jpabook/blob/main/images/09_01.png?raw=true)
 
 
-![](https://github.com/dididiri1/jpabook/images/09_02.png?raw=true)
+![](https://github.com/dididiri1/jpabook/blob/main/images/09_02.png?raw=true)
 
 * @Embeddable: 값 타입을 정의하는 곳에 표시
 * @Embedded: 값 타입을 사용한 곳에 표시
@@ -143,7 +143,7 @@
 * 임베디드 타입 값은 값 타입을 여러 엔티티에서 공유하면 위험함
 * 부작용(side effect) 발생
 
-![](https://github.com/dididiri1/jpabook/images/09_03.png?raw=true)
+![](https://github.com/dididiri1/jpabook/blob/main/images/09_03.png?raw=true)
 
 ### 값 타입 복사
 
@@ -151,7 +151,7 @@
 * 대신 값(인스턴스)를 복사해서 사용
 
 
-![](https://github.com/dididiri1/jpabook/images/09_04.png?raw=true)
+![](https://github.com/dididiri1/jpabook/blob/main/images/09_04.png?raw=true)
 
 
 
