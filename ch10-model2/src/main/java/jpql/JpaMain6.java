@@ -1,10 +1,13 @@
 package jpql;
 
-import javax.persistence.*;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
 import java.util.List;
 
 
-public class JpaMain2 {
+public class JpaMain6 {
 
     public static void main(String[] args) {
 
@@ -22,19 +25,20 @@ public class JpaMain2 {
             member.setAge(10);
             em.persist(member);
 
-            TypedQuery<Member> query1 = em.createQuery("select m from Member m", Member.class);
-
-            List<Member> resultList = query1.getResultList();
-
-            for (Member member1 : resultList) {
-                System.out.println("member1 = " + member1);
-            }
+            em.flush();
+            em.clear();
 
 
-            Query query2 = em.createQuery("select m.username, m.age from Member m");
+            // new 명령어로 조회
+            List<MemberDTO> members =
+                    em.createQuery("select new jpql.MemberDTO(m.username, m.age) from Member m", MemberDTO.class)
+                            .getResultList();
 
-            Object singleResult = query2.getSingleResult();
-            System.out.println("singleResult = " + singleResult);
+
+
+            System.out.println("username = " + members.get(0).getUsername());
+            System.out.println("age = " + members.get(0).getAge());
+
 
             tx.commit();
         } catch (Exception e) {

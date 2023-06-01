@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.List;
 
 
-public class JpaMain2 {
+public class JpaMain4 {
 
     public static void main(String[] args) {
 
@@ -22,19 +22,22 @@ public class JpaMain2 {
             member.setAge(10);
             em.persist(member);
 
-            TypedQuery<Member> query1 = em.createQuery("select m from Member m", Member.class);
+            em.flush();
+            em.clear();
 
-            List<Member> resultList = query1.getResultList();
+            // 영속성 컨텍스트에서 관리 된다.
+            List<Member> result = em.createQuery("select m from Member m ", Member.class).getResultList();
 
-            for (Member member1 : resultList) {
-                System.out.println("member1 = " + member1);
-            }
+            Member findMember = result.get(0);
+            findMember.setAge(20);
 
 
-            Query query2 = em.createQuery("select m.username, m.age from Member m");
+            List<Team> result2 = em.createQuery("select m.team from Member m join m.team t", Team.class).getResultList();
 
-            Object singleResult = query2.getSingleResult();
-            System.out.println("singleResult = " + singleResult);
+            em.createQuery("select o.address from Order o", Address.class).getResultList();
+
+
+            em.createQuery("select distinct m.username, m.age from Member m").getResultList();
 
             tx.commit();
         } catch (Exception e) {

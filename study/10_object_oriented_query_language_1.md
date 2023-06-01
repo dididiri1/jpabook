@@ -258,3 +258,106 @@ delete_문 :: = delete_절 [where_절]
 
 ## 프로젝션
 
+* SELECT 절에 조회할 대상을 지정하는 것
+* 프로젝션 대상: 엔티티, 임베디드 타입, 스칼라 타입(숫자, 문자등 기본 데이터 타입)
+* SELECT **m** FROM Member m -> 엔티티 프로젝션
+``` java
+
+ // 영속성 컨텍스트에서 관리 된다.
+ List<Member> result = em.createQuery("select m from Member m ", Member.class).getResultList();
+
+ Member findMember = result.get(0);
+ findMember.setAge(20);
+
+```
+  
+  * 조인 쿼리가 나가는데, 다른 사람도 예측할 수 있게 왠만하면 JPQL에 조인을 명시하는 것이 좋다.(뒤에서 배움)
+  * join 빼도 알아서 해줌
+
+``` java
+
+ List<Team> result2 = em.createQuery("select m.team from Member m join m.team t", Team.class).getResultList();
+
+```
+
+* SELECT **m.address** FROM Member m -> 임베디드 타입 프로젝션
+
+  * 소속된 엔티티에서 부터 시작되어야 한다.
+
+``` java
+
+ em.createQuery("select o.address from Order o", Address.class).getResultList();
+
+```
+
+* SELECT **m.username, m.age** FROM Member m -> 스칼라 타입 프로젝션
+
+``` java
+
+ em.createQuery("select m.username, m.age from Member m").getResultList();
+
+```
+
+* DISTINCT로 중복 제거
+
+``` java
+
+ em.createQuery("select distinct m.username, m.age from Member m").getResultList();
+
+```
+
+## 프로벡션 - 여러 값 조희
+
+***고민거리: 응닶 타입이 2개데 어떻케 가져오지?***
+
+* SELECT **m.username, m.age** FROM Member m
+
+* Query 타입으로 조회
+  * 타입을 지정하지 못해서 오브젝트로 돌려줌 그래서 타입 캐스팅 해줘여됨 
+
+``` java
+
+ List resultList = em.createQuery("select m.username, m.age from Member m").
+           getResultList();
+
+ Object o = resultList.get(0);
+ Object[] result = (Object[]) o;
+ 
+ System.out.println("username = " + result[0]);
+ System.out.println("age = " + result[1]);
+
+```
+
+* Object[] 타입으로 조회
+  * 위에 별차이 없는듯
+
+``` java
+
+ List<Object> resultList1 = em.createQuery("select m.username, m.age from Member m").
+                    getResultList();
+
+ Object[] result1 = (Object[]) resultList1.get(0);
+
+ System.out.println("username = " + result1[0]);
+ System.out.println("age = " + result1[1]);
+
+```
+
+* new 명령어로 조회
+  * 단순 값을 DTO로 바로 조회  SELECT **new** jpabook.jpql.UserDTO(m,username, m.age) FROM Member m
+  * 패키지 명을 포함한 전체 클래스 명 입력
+  * 순서와 타입이 일치하는 생성자 필요
+  * **나중에 QueryDSL로 극복할 수 있다.**
+
+``` java
+
+  List<MemberDTO> members =
+  em.createQuery("select new jpql.MemberDTO(m.username, m.age) from Member m", MemberDTO.class)
+           .getResultList();
+
+
+
+  System.out.println("username = " + members.get(0).getUsername());
+  System.out.println("age = " + members.get(0).getAge());
+
+```

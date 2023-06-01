@@ -19,6 +19,7 @@ public class JpaMain {
 
             Member member = new Member();
             member.setUsername("member1");
+            member.setAge(10);
             em.persist(member);
 
             TypedQuery<Member> query1 = em.createQuery("select m from Member m", Member.class);
