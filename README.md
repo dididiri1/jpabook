@@ -22,4 +22,6 @@
 
 * [섹션 9. 값 타입](https://github.com/dididiri1/jpabook/blob/main/study/09_value_type.md)
 
+* [섹션 9. 값 타입](https://github.com/dididiri1/jpabook/blob/main/study/10_object_oriented_query_language_1.md.md)
+
 
