@@ -7,10 +7,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ch06-model3" />
-        <module name="ch06-model2" />
-        <module name="ch06-model1" />
-        <module name="ch05-model1" />
         <module name="ch09-model1" />
         <module name="ch08-model2" />
         <module name="ch08-model1" />
@@ -19,7 +15,15 @@
         <module name="ch09-model2" />
         <module name="ch07-model3" />
         <module name="ch09-model3" />
+        <module name="ch10-model1" />
+        <module name="ch06-model3" />
+        <module name="ch06-model2" />
+        <module name="ch06-model1" />
+        <module name="ch05-model1" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ch09-model4" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
