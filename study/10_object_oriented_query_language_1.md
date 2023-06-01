@@ -255,3 +255,6 @@ delete_문 :: = delete_절 [where_절]
  query.setParameter(1, usernameParam);
 
 ``` 
+
+## 프로젝션
+
