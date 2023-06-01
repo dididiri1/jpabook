@@ -133,7 +133,112 @@
 
 * JPA를 사용하면서 JDBC 커넥션을 직접 사용하거나, 스프링 JdbcTemplate, 마이바티스등을 함꼐 사용할 수 있다.
 * 단, 영속성 컨텍스트를 적절한 시점에 강제로 플러시 하는 것이 필요하다.
-  * ***참고: executeQuery 하기전에 강제로 em.flush() 해줘여됨*** 
+  * ***참고: executeQuery 하기전에 강제로 em.flush() 해줘야됨*** 
 * 예) JPA를 우회해서 SQL을 실행하기 직전에 영속성 컨텍스트 수동 플러시
 
 
+# JPQL 기본 문법
+
+
+***ANSI SQL란***
+***ANSI, American National Standards Institute(미국 표준 협회)가 각기 다른 DBMS(Oracle, MySQL 등)에서 공통적으로 사용할 수 있도록 고안한 표준 SQL문 작성방법입니다.***
+
+## JPQL 소개
+
+* Java Persistence Query Language
+
+* JPQL은 객체지향 쿼리 언어다. 따라서 테이블을 대상으로 쿼리하는 것이 아니라 엔티티 객체를 대상으로 쿼리 한다.
+
+* JJPQL은 엔티티 객체를 대상으로 쿼리 를 질의하고
+  * JSQL은 데이터베이스 테이블을 대상으로 쿼리 를 질의한다.
+  * JJPQL은 SQL을 추상화해서 특정 데이터베이스 SQL에 의존하지 않는다.
+
+* JJPQL은 결국 SQL로 변환된다.
+
+
+![](https://github.com/dididiri1/jpabook/blob/main/images/10_01.png?raw=true)
+
+### JPQL 문법
+
+* select m form **Member** as m where **m.age** > 18
+* 엔티티와 속성은 대소문자 구분O (Mmember, age)
+* JPQL 키워드 대소문자 구분X (SELECT, FROM, where)
+* 엔티티 이름 사용 테이블 이름이 아닌(Member)
+* **별칭은 필수(m)** (as는 생략가능)
+
+## 집합과 정렬
+
+```sql
+select_문 :: = 
+    select_절
+    from_절
+    [where_절]
+    [groupby_절]
+    [having_절]
+    [orderby_절]
+```
+
+```sql
+update_문 :: = update_절 [where_절]
+delete_문 :: = delete_절 [where_절]
+```
+
+## TypeQuery, Query
+
+* TypeQuery: 반환 타입이 명확할 때 사용
+* Query: 반환 타입이 명확하지 않을때 사용
+
+
+``` java
+  
+  TypedQuery<Member> query1 = em.createQuery("select m from Member m", Member.class);
+  
+  TypedQuery<String> query2 = em.createQuery("select m.username from Member m", String.class);
+  
+```
+
+``` java
+  Query query3 = em.createQuery("select m.username, m.age from Member m");
+```
+
+## 결과 조희 API
+
+* query.getResultList(): **결과가 하나 이상일 때, 리스트 반환
+  * 결과가 없으면 빈 리스트 반환
+
+``` java
+  TypedQuery<Member> query1 = em.createQuery("select m from Member m", Member.class);
+
+  List<Member> resultList = query1.getResultList();
+
+  for (Member member1 : resultList) {
+     System.out.println("member1 = " + member1);
+  }
+  
+```  
+  
+* query.getSingleResult(): **결과가 정확히 하나**, 단일 객체 반환
+  * 결과가 없으면: javax.persistence.NoResultException
+  * 둘 이상이면: javax.persistence.NonUniqueResultException
+
+``` java
+  
+  Query query2 = em.createQuery("select m.username, m.age from Member m");
+
+  Object singleResult = query2.getSingleResult();
+  System.out.println("singleResult = " + singleResult);
+  
+```  
+
+## 파라미터 바인딩 - 이름 기준, 위치 기준
+
+* 이름 기준으로 바인팅 할것
+* 위치 기준은 중간에 순서가 끼어들면 장애로 이어짐
+
+``` java
+
+ TypedQuery<Member> query = em.createQuery("select m from Member m where m.username = :username", Member.class);
+ query.setParameter("username", "member1");
+ Member result = query.getSingleResult();
+
+``` 
