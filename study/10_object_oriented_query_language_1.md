@@ -149,11 +149,11 @@
 
 * JPQL은 객체지향 쿼리 언어다. 따라서 테이블을 대상으로 쿼리하는 것이 아니라 엔티티 객체를 대상으로 쿼리 한다.
 
-* JJPQL은 엔티티 객체를 대상으로 쿼리 를 질의하고
+* JPQL은 엔티티 객체를 대상으로 쿼리 를 질의하고
   * JSQL은 데이터베이스 테이블을 대상으로 쿼리 를 질의한다.
-  * JJPQL은 SQL을 추상화해서 특정 데이터베이스 SQL에 의존하지 않는다.
+  * JPQL은 SQL을 추상화해서 특정 데이터베이스 SQL에 의존하지 않는다.
 
-* JJPQL은 결국 SQL로 변환된다.
+* JPQL은 결국 SQL로 변환된다.
 
 
 ![](https://github.com/dididiri1/jpabook/blob/main/images/10_01.png?raw=true)
@@ -161,7 +161,7 @@
 ### JPQL 문법
 
 * select m form **Member** as m where **m.age** > 18
-* 엔티티와 속성은 대소문자 구분O (Mmember, age)
+* 엔티티와 속성은 대소문자 구분O (Member, age)
 * JPQL 키워드 대소문자 구분X (SELECT, FROM, where)
 * 엔티티 이름 사용 테이블 이름이 아닌(Member)
 * **별칭은 필수(m)** (as는 생략가능)
@@ -224,8 +224,8 @@ delete_문 :: = delete_절 [where_절]
 ``` java
   
   Query query2 = em.createQuery("select m.username, m.age from Member m");
-
   Object singleResult = query2.getSingleResult();
+  
   System.out.println("singleResult = " + singleResult);
   
 ```  
@@ -235,10 +235,23 @@ delete_문 :: = delete_절 [where_절]
 * 이름 기준으로 바인팅 할것
 * 위치 기준은 중간에 순서가 끼어들면 장애로 이어짐
 
+
+* 이름 기준 
 ``` java
 
  TypedQuery<Member> query = em.createQuery("select m from Member m where m.username = :username", Member.class);
  query.setParameter("username", "member1");
+ 
  Member result = query.getSingleResult();
+
+``` 
+
+* 위치 기준
+
+``` java
+
+ select m form Member m where m.username=?1
+ 
+ query.setParameter(1, usernameParam);
 
 ``` 
