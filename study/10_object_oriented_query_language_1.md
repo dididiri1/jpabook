@@ -329,7 +329,7 @@ delete_문 :: = delete_절 [where_절]
 ```
 
 * Object[] 타입으로 조회
-  * 위에 Query 타입 조회와 몇줄빠지는거 말고는 별차이 없음
+  * 위에 Query 타입 조회와 몇줄빠지는거 말고ㅍ 별차이 없음
 
 ``` java
 
@@ -359,5 +359,74 @@ delete_문 :: = delete_절 [where_절]
 
   System.out.println("username = " + members.get(0).getUsername());
   System.out.println("age = " + members.get(0).getAge());
+
+```
+
+## 페이징 API
+
+* JPA는 페이징을 다음 두 API로 추상화
+
+* 조회 시작 위치(0부터 시작)
+
+``` java
+
+  setFirstResult(int startPosition)
+  
+```
+
+* 조회할 데이터 수
+
+``` java
+
+  setMaxResults(int maxResult)
+  
+```
+
+## 페이징 API 예시
+
+
+``` java
+
+  List<Member> result = em.createQuery("select m from Member m order by m.age desc", Member.class)
+                    .setFirstResult(1)
+                    .setMaxResults(10)
+                    .getResultList();
+  
+```
+
+## 페이지 API - MySQL 방언
+
+``` sql
+
+  SELECT
+      M.ID AS ID,
+      M.AGE AS AGE,
+      M.TEAM_ID AS TEAM_ID,
+      M.NAME AS NAME
+  FROM
+      MEMBER M
+  ORDER BY
+      M.name DESC LIMIT ?, ?
+
+```
+
+## 페이지 API - Oracle 방언
+
+``` sql
+
+  SELECT * FROM
+      ( SELECT ROW_.*, ROWNUM ROWNUM_
+      FROM
+          ( SELECT
+              M.ID AS ID,
+              M.AGE AS AGE,
+              M.TEAM_ID AS TEAM_ID,
+              M.NAME AS NAME
+            FROM MEMBER M
+            ORDER BY M.NAME
+           ) ROW_
+       WHERE ROWNUM <= ?
+       )
+  WHERE ROWNUM_ > ?
 
 ```
