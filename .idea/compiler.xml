@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ch09-model1" />
         <module name="ch08-model2" />
+        <module name="ch10-model4" />
         <module name="ch08-model1" />
         <module name="ch07-model1" />
         <module name="ch07-model2" />

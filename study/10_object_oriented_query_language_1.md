@@ -430,3 +430,31 @@ delete_문 :: = delete_절 [where_절]
   WHERE ROWNUM_ > ?
 
 ```
+
+## 조인
+
+* 내부 조인
+
+``` sql
+SELECT m
+FROM Member m
+[INNER] JOIN m.team t
+```
+
+* 외부 조인
+
+``` sql
+SELECT m
+FROM MEMBER m
+LEFT [OUTER] JOIN m.team t
+```
+
+* 세타 조인(막조인)
+
+``` sql
+SELECT COUNT(m)
+FROM Member m, Team t
+WHERE m.username = t.name
+```
+
+
