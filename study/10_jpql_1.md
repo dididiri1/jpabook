@@ -482,7 +482,7 @@ WHERE m.username = t.name
   FROM Member m LEFT JOIN TEAM t ON m.TEAM_ID = t.id AND t.name = 'A'
 ```
 
-* **2. 연관관계 없는 엔티티 외부 조인**
+## **2. 연관관계 없는 엔티티 외부 조인**
 
 * 예) 회원의 이름과 팀의 이름이 같은 대상 외부 조인. 연관관계가 없다.
 
@@ -716,7 +716,7 @@ WHERE m.username = t.name
 
   * 사용하는 DB 방언을 상속받고, 사용자 정의 함수를 등록한다.
 
-``` java
+```sql
 
     select function ('group_concat', i.name) from Item i
   
