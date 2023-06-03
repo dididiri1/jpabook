@@ -23,6 +23,8 @@
 * [섹션 9. 값 타입](https://github.com/dididiri1/jpabook/blob/main/study/09_value_type.md)
 
 
-* [섹션 10. 객체지향 쿼리 언어1 - 기본 문법](https://github.com/dididiri1/jpabook/blob/main/study/10_object_oriented_query_language_1.md)
+* [섹션 10. 객체지향 쿼리 언어1 - 기본 문법](https://github.com/dididiri1/jpabook/blob/main/study/10_jpql_1.md)
 
+
+* [섹션 10. 객체지향 쿼리 언어2 - 중급 문법](https://github.com/dididiri1/jpabook/blob/main/study/11_jpql_2.md)
 
