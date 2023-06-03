@@ -382,7 +382,7 @@ delete_문 :: = delete_절 [where_절]
   
 ```
 
-## 페이징 API 예시
+* 페이징 API 예시
 
 
 ``` java
@@ -394,7 +394,7 @@ delete_문 :: = delete_절 [where_절]
   
 ```
 
-## 페이지 API - MySQL 방언
+* 페이지 API - MySQL 방언
 
 ``` sql
 
@@ -410,7 +410,7 @@ delete_문 :: = delete_절 [where_절]
 
 ```
 
-## 페이지 API - Oracle 방언
+* 페이지 API - Oracle 방언
 
 ``` sql
 
@@ -431,7 +431,7 @@ delete_문 :: = delete_절 [where_절]
 
 ```
 
-## 조인
+### 조인
 
 * 내부 조인
 
@@ -457,4 +457,59 @@ FROM Member m, Team t
 WHERE m.username = t.name
 ```
 
+### 조인 - ON 절
 
+- JPA2.1 부터 ON절을 활용한 조인이 가능하다.
+
+  - 조인시 조인 대상을 미리 필터링 할 수 있음
+  - 하이버네이트 5.1부터 **연관관계가 없는 엔티티도 외부 조인**이 가능!
+
+## **1. 조인 대상 필터링**
+
+* 예) 회원과 팀을 조인하면서, 팀 이름이 A인 팀만 조인
+
+* JPQL:
+
+```sql
+  SELECT m,t 
+  FROM Member m LEFT JOIN m.team t on t.name = 'A'
+```
+
+* SQL:
+
+```sql
+  SELECT m.*, t.*
+  FROM Member m LEFT JOIN TEAM t ON m.TEAM_ID = t.id AND t.name = 'A'
+```
+
+* **2. 연관관계 없는 엔티티 외부 조인**
+
+* 예) 회원의 이름과 팀의 이름이 같은 대상 외부 조인. 연관관계가 없다.
+
+* 서로 아무 연관관계가 없어도 LEFT JOIN 가능하다.
+
+
+* JPQL:
+
+```sql
+    SELECT m,t 
+    FROM Member m 
+    LEFT JOIN Team t
+      on m.username = t.name
+```
+
+* SQL:
+
+```sql
+    SELECT m.*, t.*
+    FROM Member m
+    LEFT JOIN TEAM t
+      ON m.username = t.name
+```
+
+## 서브 쿼리
+
+* 나이가 평균보다 많은 회원
+
+
+* 한 건이라도 주문한 고객
