@@ -567,3 +567,63 @@ WHERE m.username = t.name
 
 * **FROM 절의 서브 쿼리는 현재 JPQL에서 불가능**
   * 조인으로 풀 수 있으면 풀어서 해결
+  * 그래도 쓰고 싶다면
+    * 네이티브 쿼리로 해결하거나,
+    * 어플리케이션 비즈니스 로직에서 풀어내거나
+    * 쿼리를 두번 날려서 해결할 수 있다.
+
+## JPQL 타입 표현
+
+* 문자
+  * 'HELLO', 'She''s'
+
+* 숫자
+  * 10L(Long), 10D(Double), 10F(Float)
+
+* Boolean
+  * TRUE, FALSE
+
+* ENUM
+  * Jpabook.MemberType.Admin(풀 패키지명 포함)
+  * 보통은 파라미터 바인딩으로 처리
+  * QueryDSL에서는 복잡하지 않게 자바 코드로 사용한다.
+
+* 예시
+
+``` java
+
+   String query = "select m.username, 'HELLO', true from Member m " +
+   "where m.type = :userType";
+
+   List<Object[]> result = em.createQuery(query)
+        .setParameter("userType", MemberType.ADMIN)
+        .getResultList();
+        
+   for (Object[] objects : result) {
+        System.out.println("objects[0] = " + objects[0]);
+        System.out.println("objects[1] = " + objects[1]);
+        System.out.println("objects[2] = " + objects[2]);
+   }
+
+``` 
+
+* 엔티티 타입
+  * TYPE(m) = Member (상속 관계에서 사용)
+  * Item을 상속받은 여러개의 클래스 중 Book만 조회하고 싶은 경우
+
+``` java
+
+  em.createQuery("select i from Item i where type(i) = Book", Item.class).getResultList();
+
+``` 
+
+## JPQL 기타
+
+* SQL과 문법이 같은  식
+* EXISTS, IN
+* AND, OR, NOT
+* =, >, >=, <, <=, <>
+* BETWEEN, LIKE, **IS NULL**
+
+
+
