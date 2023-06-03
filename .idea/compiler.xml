@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ch10-model8" />
         <module name="ch09-model1" />
         <module name="ch08-model2" />
         <module name="ch10-model4" />
