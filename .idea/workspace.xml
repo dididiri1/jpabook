@@ -4,21 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db6a5f0e-d9e8-4cd8-8c50-341a8d706bd3" name="Changes" comment="조인 (서브쿼리) 학습 추가">
-      <change afterPath="$PROJECT_DIR$/ch10-model6/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch10-model6/src/main/java/jpql/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch10-model6/src/main/java/jpql/JpaMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch10-model6/src/main/java/jpql/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch10-model6/src/main/java/jpql/MemberDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch10-model6/src/main/java/jpql/MemberType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch10-model6/src/main/java/jpql/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch10-model6/src/main/java/jpql/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch10-model6/src/main/java/jpql/Team.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch10-model6/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+    <list default="true" id="db6a5f0e-d9e8-4cd8-8c50-341a8d706bd3" name="Changes" comment="JPQL 타입 표현과 기타식 학습 추가">
+      <change afterPath="$PROJECT_DIR$/ch10-model7/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch10-model7/src/main/java/jpql/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch10-model7/src/main/java/jpql/JpaMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch10-model7/src/main/java/jpql/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch10-model7/src/main/java/jpql/MemberDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch10-model7/src/main/java/jpql/MemberType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch10-model7/src/main/java/jpql/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch10-model7/src/main/java/jpql/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch10-model7/src/main/java/jpql/Team.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch10-model7/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch10-model5/src/main/java/jpql/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/ch10-model5/src/main/java/jpql/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/study/10_object_oriented_query_language_1.md" beforeDir="false" afterPath="$PROJECT_DIR$/study/10_object_oriented_query_language_1.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +55,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "/Users/kangmin/IdeaProjects/jpabook/ch10-model6/src/main/java",
+    "last_opened_file_path": "/Users/kangmin/IdeaProjects/jpabook/ch10-model7/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,18 +72,18 @@
       <recent name="jpql" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ch10-model7/src/main/resources" />
+      <recent name="$PROJECT_DIR$/ch10-model7/src/main/java" />
+      <recent name="$PROJECT_DIR$/ch10-model7/src/main" />
       <recent name="$PROJECT_DIR$/ch10-model6/src/main/java" />
       <recent name="$PROJECT_DIR$/ch10-model6/src/main/resources" />
-      <recent name="$PROJECT_DIR$/ch10-model5/src/main/java" />
-      <recent name="$PROJECT_DIR$/ch10-model5/src/main/resources" />
-      <recent name="$PROJECT_DIR$/ch10-model4/src/main/resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="jpql" />
       <recent name="hellojpa" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.JpaMain (2)">
+  <component name="RunManager" selected="Application.JpaMain (3)">
     <configuration name="JpaMain (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="jpql.JpaMain" />
       <module name="ch10-model3" />
@@ -111,9 +110,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JpaMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="JpaMain (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="jpql.JpaMain" />
-      <module name="ch10-model4" />
+      <module name="ch10-model7" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="jpql.*" />
@@ -124,9 +123,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JpaMain5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jpql.JpaMain5" />
-      <module name="ch10-model2" />
+    <configuration name="JpaMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="jpql.JpaMain" />
+      <module name="ch10-model4" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="jpql.*" />
@@ -152,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JpaMain (3)" />
         <item itemvalue="Application.JpaMain (2)" />
         <item itemvalue="Application.JpaMain" />
         <item itemvalue="Application.JpaMain (1)" />
         <item itemvalue="Application.JpaMain6" />
-        <item itemvalue="Application.JpaMain5" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +175,7 @@
       <workItem from="1685583689511" duration="20947000" />
       <workItem from="1685678749340" duration="92000" />
       <workItem from="1685678869405" duration="56000" />
-      <workItem from="1685767292332" duration="4388000" />
+      <workItem from="1685767292332" duration="5988000" />
     </task>
     <task id="LOCAL-00001" summary="ch07 model1 add">
       <created>1685505369907</created>
@@ -311,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685770557991</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="JPQL 타입 표현과 기타식 학습 추가">
+      <created>1685771900339</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1685771900339</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,6 +352,7 @@
     <MESSAGE value="조인 학습 추가" />
     <MESSAGE value="조인 (on절, 조인 대상 필터링, 연관관게 없는 엔티티 외부 조인) 학습 추가" />
     <MESSAGE value="조인 (서브쿼리) 학습 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="조인 (서브쿼리) 학습 추가" />
+    <MESSAGE value="JPQL 타입 표현과 기타식 학습 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="JPQL 타입 표현과 기타식 학습 추가" />
   </component>
 </project>
