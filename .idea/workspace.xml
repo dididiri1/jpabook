@@ -4,9 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db6a5f0e-d9e8-4cd8-8c50-341a8d706bd3" name="Changes" comment="오타 수정">
+    <list default="true" id="db6a5f0e-d9e8-4cd8-8c50-341a8d706bd3" name="Changes" comment="경로 표현식(묵시적, 명시적) 조인 학습 추가">
+      <change afterPath="$PROJECT_DIR$/ch11-model2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch11-model2/src/main/java/jpql/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch11-model2/src/main/java/jpql/JpaMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch11-model2/src/main/java/jpql/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch11-model2/src/main/java/jpql/MemberDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch11-model2/src/main/java/jpql/MemberType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch11-model2/src/main/java/jpql/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch11-model2/src/main/java/jpql/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch11-model2/src/main/java/jpql/Team.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch11-model2/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/11_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/11_02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch11-model1/src/main/java/jpql/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/ch11-model1/src/main/java/jpql/JpaMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/study/11_jpql_2.md" beforeDir="false" afterPath="$PROJECT_DIR$/study/11_jpql_2.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,40 +52,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/kangmin/IdeaProjects/jpabook/ch11-model1/src/main/java&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "/Users/kangmin/IdeaProjects/jpabook/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="jpql" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/ch11-model2/src/main/resources" />
+      <recent name="$PROJECT_DIR$/ch11-model2/src/main/java" />
       <recent name="$PROJECT_DIR$/ch11-model1/src/main/java" />
       <recent name="$PROJECT_DIR$/ch11-model1/src/main/resources" />
-      <recent name="$PROJECT_DIR$/ch10-model8/src/main/resources" />
-      <recent name="$PROJECT_DIR$/ch10-model8/src/main/java" />
-      <recent name="$PROJECT_DIR$/ch10-model7/src/main/resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="jpql" />
       <recent name="hellojpa" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.JpaMain (5)">
+  <component name="RunManager" selected="Application.JpaMain (1)">
+    <configuration name="JpaMain (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="jpql.JpaMain" />
+      <module name="ch11-model2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jpql.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JpaMain (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="jpql.JpaMain" />
       <module name="ch10-model6" />
@@ -125,26 +152,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JpaMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jpql.JpaMain" />
-      <module name="ch10-model4" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="jpql.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JpaMain (1)" />
         <item itemvalue="Application.JpaMain (5)" />
         <item itemvalue="Application.JpaMain (4)" />
         <item itemvalue="Application.JpaMain (3)" />
         <item itemvalue="Application.JpaMain (2)" />
-        <item itemvalue="Application.JpaMain" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +180,7 @@
       <workItem from="1685678869405" duration="56000" />
       <workItem from="1685767292332" duration="8607000" />
       <workItem from="1685850681077" duration="598000" />
-      <workItem from="1685926876701" duration="2843000" />
+      <workItem from="1685926876701" duration="8666000" />
     </task>
     <task id="LOCAL-00001" summary="ch07 model1 add">
       <created>1685505369907</created>
@@ -336,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685777661855</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="경로 표현식(묵시적, 명시적) 조인 학습 추가">
+      <created>1685930054344</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1685930054344</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,6 +397,7 @@
     <MESSAGE value="조건식(CASE 등등), 사용자 정의 함수 호출 학습 추가" />
     <MESSAGE value="11_jpql_2.md 파일 추가" />
     <MESSAGE value="오타 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="오타 수정" />
+    <MESSAGE value="경로 표현식(묵시적, 명시적) 조인 학습 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="경로 표현식(묵시적, 명시적) 조인 학습 추가" />
   </component>
 </project>

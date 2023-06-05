@@ -117,7 +117,7 @@ Hibernate:
   * 묵시적 조인 실무에서 X
   * 명시적 조인 사용해야함 
 
-## 명시적 조인, 묵시적 조인
+### 명시적 조인, 묵시적 조인
 
 * 명시적 조인: join 키워드 직접 사용
   * select m from Member m **join m.team t**
@@ -132,8 +132,107 @@ Hibernate:
 * select t.members.username from Team t -> 실패
 * select m.username from Team t join t.members m -> 성공
 
-## 실무 조언
+### 실무 조언
 
 * **가급적 묵시적 조인 대신에 명시적 조인 사용**
 * 조인은 SQL 튜닝에 중요 포인트
 * 묵시적 조인은 조인이 일이나는 상황을 한눈에 파악하기 어려움!
+
+## JPQL - 페치 조인(fetch join)
+* **실무에서 정말정말 중요함!!**
+
+### 페치 조인(fetch join)
+
+* SQL 조인 종류 X
+* JPQL에서 **성능 최적화**를 위해 제공하는 기능
+* 연관된 엔티티나 컬렉션을 **SQL 한 번에 함께 조회**하는 기능
+* join fetch 명령어 사용
+* 페치 조인 :: [ LEFT [OUTER] | INNER ] JOIN FETCH 조인경로
+
+### 엔티티 페치 조인
+
+* 회원을 조회하면서 연관된 팀도 함께 조회(SQL 한 번에)
+* SQL을 보면 회원 뿐만 아니라 **팀(T.*)**도 함께 **SELECT**
+
+* [JPQL]
+```sql
+  select m from Member m join fetch m.team
+```
+
+* [SQL]
+```sql
+  SELECT M.*, T.* FROM MEMBER M 
+  INNER JOIN TEAM T ON M.TEAM_ID = T.ID
+```
+
+### 예제
+
+* fetch join 없이하면 N + 1 발생 (쿼리가 여러번 나감)
+* fetch join 사용시 지연 로딩을 하지 않고, 회원과 팀을 한번에 조회한다.
+* 지연로딩으로 해도 fetch join이 우선시 됨
+
+
+``` java
+
+  //String query = "select m from Member m";
+  String query = "select m from Member m join fetch m.team";
+
+  List<Member> result = em.createQuery(query, Member.class).getResultList();
+
+  for (Member member : result) {
+       System.out.println("member = " + member.getUsername() + "," + member.getTeam().getName());
+       //회원1, 팀A(SQL)
+       //회원2, 팀A(1차 캐시)
+       //회원3, 팀B
+
+       //회원 100명 -> N + 1 (fetch 조인으로 해결)
+  }
+```  
+
+### 컬렉션 페치 조인
+
+* 일대다 관계, 컬렉션 페치 조인
+
+* [JPQL]
+``` sql
+
+  select t
+  from Team t join fetch t.members
+  where t.name = '팀A'
+
+```  
+
+* [SQL]
+``` sql
+
+  SELECT T.*, M.*
+  FROM TEAM T
+  INNER JOIN MEMBER M ON T.ID = M.TEAM_ID
+  WHERE T.NAME = '팀A'
+
+```
+
+![](https://github.com/dididiri1/jpabook/blob/main/images/11_01.png?raw=true)
+
+### 페치 조인과 DISTINCT
+
+* SQL의 DISTINCT는 중복된 결과를 제거하는 명령
+* JPQL의 DISTINCT 2가지 기능 제공
+  * 1. SQL에 DISTINCT를 추가
+  * 2. 애플리케이션에서 엔티티 중복 제거
+
+* SQL 쿼리에서는 DISTINCT를 추가 하지만 데이터가 다르면 안됨, 완전이 컬럼값이 똑같에야 중복 제거함.
+* DISTINCT가 추가로 애플리케이션에서 중복 제거시도
+* 같은 식별자를 가진 **Team 엔티티 제거**
+
+![](https://github.com/dididiri1/jpabook/blob/main/images/11_02.png?raw=true)
+
+
+### 페치 조인과 일반 차이의 차이
+
+* 일반 조인 실행시 연관된 엔티티를 함께 조회하지 않음
+* JPQL은 결과를 반환할 때 연관관계 고려X
+* 단지 SELECT 절에 지정한 엔티티만 조회할 뿐
+* 여기서는 팀 엔티티만 조회하고, 회원 엔티티는 조회X
+* 페치 조인을 사용할 때만 연관된 엔티티도 함께 **조회(즉시 로딩)**
+* **페치 조인은 객체 그래프를 SQL 한번에 조회하는 개념**
