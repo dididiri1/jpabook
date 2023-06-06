@@ -33,6 +33,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ch09-model4" target="11" />
+      <module name="ch11-model3" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
