@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db6a5f0e-d9e8-4cd8-8c50-341a8d706bd3" name="Changes" comment="경로 표현식(묵시적, 명시적) 조인 학습 추가">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch11-model2/src/main/java/jpql/JpaMain2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch11-model2/src/main/java/jpql/JpaMain3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+    <list default="true" id="db6a5f0e-d9e8-4cd8-8c50-341a8d706bd3" name="Changes" comment="엔티티 직접 사용 소스 코드 추가">
+      <change afterPath="$PROJECT_DIR$/ch11-model2/src/main/java/jpql/JpaMain4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch11-model2/src/main/java/jpql/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/ch11-model2/src/main/java/jpql/Member.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +33,15 @@
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
       <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
         <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
     <option name="myId2Visible">
       <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
@@ -92,23 +91,10 @@
       <recent name="hellojpa" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.JpaMain3">
+  <component name="RunManager" selected="Application.JpaMain4">
     <configuration name="JpaMain (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="jpql.JpaMain" />
       <module name="ch11-model2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="jpql.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JpaMain (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jpql.JpaMain" />
-      <module name="ch10-model8" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="jpql.*" />
@@ -158,13 +144,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JpaMain4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="jpql.JpaMain4" />
+      <module name="ch11-model2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jpql.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JpaMain4" />
         <item itemvalue="Application.JpaMain3" />
         <item itemvalue="Application.JpaMain2" />
         <item itemvalue="Application.JpaMain (1)" />
         <item itemvalue="Application.JpaMain (5)" />
-        <item itemvalue="Application.JpaMain (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +189,7 @@
       <workItem from="1686033164865" duration="194000" />
       <workItem from="1686033383173" duration="15000" />
       <workItem from="1686033414050" duration="1065000" />
-      <workItem from="1686034502610" duration="1794000" />
+      <workItem from="1686034502610" duration="2546000" />
     </task>
     <task id="LOCAL-00001" summary="ch07 model1 add">
       <created>1685505369907</created>
@@ -367,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685930054344</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="엔티티 직접 사용 소스 코드 추가">
+      <created>1686036949795</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1686036949795</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,6 +414,7 @@
     <MESSAGE value="11_jpql_2.md 파일 추가" />
     <MESSAGE value="오타 수정" />
     <MESSAGE value="경로 표현식(묵시적, 명시적) 조인 학습 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="경로 표현식(묵시적, 명시적) 조인 학습 추가" />
+    <MESSAGE value="엔티티 직접 사용 소스 코드 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="엔티티 직접 사용 소스 코드 추가" />
   </component>
 </project>
