@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db6a5f0e-d9e8-4cd8-8c50-341a8d706bd3" name="Changes" comment="엔티티 직접 사용 소스 코드 추가">
-      <change afterPath="$PROJECT_DIR$/ch11-model2/src/main/java/jpql/JpaMain4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch11-model2/src/main/java/jpql/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/ch11-model2/src/main/java/jpql/Member.java" afterDir="false" />
-    </list>
+    <list default="true" id="db6a5f0e-d9e8-4cd8-8c50-341a8d706bd3" name="Changes" comment="엔티티 직접 사용 소스 코드 추가" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
