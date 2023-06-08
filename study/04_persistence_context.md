@@ -1,4 +1,4 @@
-
+# 영속성 컨텍스트
 
 
 ## 영속성 컨텍스트
@@ -7,12 +7,15 @@
 * "엔티티를 영구 저장하는 환경"이라는 뜻
 * **EntityManager.persist(entity);**
 
+![](https://github.com/dididiri1/jpabook/blob/main/images/03_01.png?raw=true)
 
 ## 엔티티 매니저? 영속성 컨텍스트?
 
 * 영속성 컨텍스트는 논리적인 개념
 * 눈에 보이지 않는다.
 * 엔티티 매니저를 통해서 영속성 컨텍스트에 접근
+
+![](https://github.com/dididiri1/jpabook/blob/main/images/03_02.png?raw=true)
 
 - **비영속(new/transient)**
   - 영속성 컨텍스트와 전혀 관계가 없는 상태
@@ -63,4 +66,8 @@
 
 ## 영속성 컨텍스트의 이점
 
-- 애플리케이션과 DB사이에 왜 중간에 영속성 컨텍스트가 있냐. 왜 필요하냐. 아래와 같은 개념들이 가능하려면, 영속성 컨텍스트가 존재해야 한다.
+- 1차 캐시
+- 동일성(identity) 보장
+- 트랜잭션을 지원하는 쓰기 지연(transactional write-behind)
+- 변경 감지(Dirty Checking)
+- 지연 로딩(Lazy Loading)
