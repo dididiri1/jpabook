@@ -8,6 +8,11 @@
 
 **자바 ORM 표준 JPA 프로그래밍 - 기본편 / By. 김영한**
 
+
+* [섹션 3. 영속성 관리 - 내부 동작 방식](https://github.com/dididiri1/jpabook/blob/main/study/04_persistence_context.md)
+
+
+
 * [섹션 5. 엔티티 매핑](https://github.com/dididiri1/jpabook/tree/main/ch05-model1/README.md)
 
 
