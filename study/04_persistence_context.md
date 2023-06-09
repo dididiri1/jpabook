@@ -9,7 +9,7 @@
 
 ![](https://github.com/dididiri1/jpabook/blob/main/images/03_01.png?raw=true)
 
-## 엔티티 매니저? 영속성 컨텍스트?
+### 엔티티 매니저? 영속성 컨텍스트?
 
 * 영속성 컨텍스트는 논리적인 개념
 * 눈에 보이지 않는다.
@@ -64,10 +64,63 @@
       em.remove(member);
 ```
 
-## 영속성 컨텍스트의 이점
+### 영속성 컨텍스트의 이점
 
 - 1차 캐시
 - 동일성(identity) 보장
 - 트랜잭션을 지원하는 쓰기 지연(transactional write-behind)
 - 변경 감지(Dirty Checking)
 - 지연 로딩(Lazy Loading)
+
+
+### 영속성 조회, 1차 캐시
+
+![](https://github.com/dididiri1/jpabook/blob/main/images/03_03.png?raw=true)
+
+![](https://github.com/dididiri1/jpabook/blob/main/images/03_04.png?raw=true)
+
+![](https://github.com/dididiri1/jpabook/blob/main/images/03_05.png?raw=true)
+
+- 1차 캐시가 있으면 어떤 이점이있을까? 조회할 때 이점이 생긴다.
+
+- find()가 일어나는 순간, 엔티티 매니저 내부의 1차 캐시를 먼저 찾는다.
+
+- 1차 캐시에 엔티티가 존재하면 바로 반환한다. DB 들리지 않는다.
+
+- 그렇케 큰 이점은 없음.
+
+### 동일성(identity) 보장
+
+- 영속 엔티티의 동일성을 보장한다.
+
+- 1차 캐시로 반복 가능한 읽기(REPEATABLE READ) 등급의 트랜잭션 격리 수준을 **데이터베이스가 아닌 애플리케이션 차원에서 제공**한다.
+
+``` java
+   // 동일성 
+   Member findMember1 = em.find(Member.class, 101L);
+   Member findMember2 = em.find(Member.class, 101L);
+
+   System.out.println("result =" + (findMember1 == findMember2)); 
+```
+
+```sql
+Hibernate: 
+    select
+        member0_.id as id1_0_0_,
+        member0_.name as name2_0_0_ 
+    from
+        Member member0_ 
+    where
+        member0_.id=?
+Hibernate: 
+    select
+        member0_.id as id1_0_0_,
+        member0_.name as name2_0_0_ 
+    from
+        Member member0_ 
+    where
+        member0_.id=?
+        
+result = true
+
+``` 
