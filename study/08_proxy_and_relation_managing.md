@@ -83,3 +83,75 @@
 
 - 참고: JPA 표준은 강제 초기화 없음
     - 강제 호출: **member.getName()**
+
+## 즉시 로딩과 지연 로딩
+
+### 지연 로딩 LAZY을 사용해서 프록시로 조회
+
+``` java
+  @Entity
+  public class Member  {
+  
+      @Id
+      @GeneratedValue
+      private Long id;
+  
+      @Column(name = "username")
+      private String username;
+      
+      @ManyToOne(fetch = FetchType.LAZY)
+      @JoinColumn(name = "team_id")
+      private Team team;
+      
+      ...
+  }
+```
+
+### 즉시 로딩
+
+![](https://github.com/dididiri1/jpabook/blob/main/images/08_07.png?raw=true)
+
+- 즉시 로딩(EAGER), Member조회시 항상 Team도 조회
+
+### 프록시와 즉시로딩 주의
+
+- **가급적 지연 로딩만 사용(특히 실무에서)**
+- 즉시 로딩을 적용하면 예상하지 못한 SQL이 발생
+- **즉시 로딩은 JPQL에서 N+1 문제를 일으킨다.**
+- **@ManyToOne, @OneToOne은 기본이 즉시 로딩임<br>-> LAZY로 항상 설정해야됨**
+- @OneToMany, @ManayToMany는 기본이 지연 로딩
+  
+### 지연 로딩 활용
+
+- **Member**와 **Team**은 자주 함께 사용 -> **즉시 로딩**
+- **Member**와 **Order**는 가끔 사용 -> **지연 로딩**
+- **Order**와 **Product**는 자주 함께 사용 -> **즉시 로딩**
+
+![](https://github.com/dididiri1/jpabook/blob/main/images/08_08.png?raw=true)
+
+![](https://github.com/dididiri1/jpabook/blob/main/images/08_09.png?raw=true)
+
+![](https://github.com/dididiri1/jpabook/blob/main/images/08_10.png?raw=true)
+
+### 지연 로딩 활용 - 실무
+
+- 모든 연관관계에 지연 로딩을 사용해라!
+- 실무에서 즉시 로딩을 사용하지 마라!
+- JPQL fetch 조인이나, 엔티티 그래프 기능을 사용해라!  
+  (뒤에서 설명)
+- 즉시 로딩은 상상하지 못한 쿼리가 나간다.
+
+### 영속성 전이: CASCADE
+
+- 특정 엔티티를 영속 상태로 만들 때 연관된 엔티티도 함께 영속  
+  상태로 만들도 싶을 때
+- 예: 부모 엔티티를 저장할 때 자식 엔티티도 함께 저장.
+
+![](https://github.com/dididiri1/jpabook/blob/main/images/08_11.png?raw=true)
+
+``` java
+
+  @OneToMany(mappedBy="parent", cascade=CascadeType.PERSIST)
+  
+```
+
