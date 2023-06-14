@@ -4,13 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db6a5f0e-d9e8-4cd8-8c50-341a8d706bd3" name="Changes" comment="영속성 컨텍스트 1 (비영속,영속) 학습 추가 #2">
-      <change afterPath="$PROJECT_DIR$/ch03_model1/src/main/java/hellojpa/JpaMain2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/03_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/03_04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/03_05.png" afterDir="false" />
+    <list default="true" id="db6a5f0e-d9e8-4cd8-8c50-341a8d706bd3" name="Changes" comment="영속성 컨텍스트 2 (1차 캐시, 동일성) 학습 추가">
+      <change afterPath="$PROJECT_DIR$/images/08_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/08_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/08_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/08_06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study/08_proxy_and_relation_managing.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/04_persistence_context.md" beforeDir="false" afterPath="$PROJECT_DIR$/study/04_persistence_context.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch08-model1/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/08_01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch08-model1/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch08-model1/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/ch08-model1/08_03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch08-model1/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/ch08-model1/08_04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch08-model1/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch08-model1/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch08-model1/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch08-model1/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch08-model1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ch08-model1/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +199,9 @@
       <workItem from="1686034502610" duration="2546000" />
       <workItem from="1686215706164" duration="1167000" />
       <workItem from="1686216878404" duration="1168000" />
-      <workItem from="1686297645561" duration="686000" />
+      <workItem from="1686297645561" duration="1988000" />
+      <workItem from="1686727034860" duration="7000" />
+      <workItem from="1686727076400" duration="1681000" />
     </task>
     <task id="LOCAL-00001" summary="ch07 model1 add">
       <created>1685505369907</created>
@@ -423,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686217446334</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="영속성 컨텍스트 2 (1차 캐시, 동일성) 학습 추가">
+      <created>1686298643449</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1686298643449</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +459,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="값 타입과 불변 객체 학습 추가" />
     <MESSAGE value="이미지 경로 수정" />
     <MESSAGE value="값 타입 컬렉션 학습 추가" />
     <MESSAGE value="값 타입 컬렉션 학습 추가 #2" />
@@ -466,6 +483,7 @@
     <MESSAGE value="JPQL 벌크 연산 학습 추가" />
     <MESSAGE value="영속성 컨텍스트 1 (비영속,영속) 학습 추가" />
     <MESSAGE value="영속성 컨텍스트 1 (비영속,영속) 학습 추가 #2" />
-    <option name="LAST_COMMIT_MESSAGE" value="영속성 컨텍스트 1 (비영속,영속) 학습 추가 #2" />
+    <MESSAGE value="영속성 컨텍스트 2 (1차 캐시, 동일성) 학습 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="영속성 컨텍스트 2 (1차 캐시, 동일성) 학습 추가" />
   </component>
 </project>
