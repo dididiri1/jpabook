@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db6a5f0e-d9e8-4cd8-8c50-341a8d706bd3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/images/08_07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/08_08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/08_09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/08_10.png" afterDir="false" />
+    <list default="true" id="db6a5f0e-d9e8-4cd8-8c50-341a8d706bd3" name="Changes" comment="프록시 활용 정리 추가">
+      <change afterPath="$PROJECT_DIR$/ch08-model2/src/main/java/hellojpa/Child.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch08-model2/src/main/java/hellojpa/Parent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch08-model3/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch08-model3/src/main/java/hellojpa/JpaMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch08-model3/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch08-model1/08_03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch08-model1/08_04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch08-model1/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch08-model2/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch08-model2/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch08-model2/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch08-model2/src/main/java/hellojpa/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/ch08-model2/src/main/java/hellojpa/JpaMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch08-model2/src/main/java/hellojpa/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/ch08-model3/src/main/java/hellojpa/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch08-model2/src/main/java/hellojpa/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/ch08-model3/src/main/java/hellojpa/Team.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/study/08_proxy_and_relation_managing.md" beforeDir="false" afterPath="$PROJECT_DIR$/study/08_proxy_and_relation_managing.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +40,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -56,7 +60,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/USER/IdeaProjects/jpabook/images",
+    "last_opened_file_path": "C:/Users/USER/IdeaProjects/jpabook/ch08-model3/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,11 +77,11 @@
       <recent name="jpql" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\IdeaProjects\jpabook\ch08-model3\src\main\resources" />
+      <recent name="C:\Users\USER\IdeaProjects\jpabook\ch08-model3" />
+      <recent name="C:\Users\USER\IdeaProjects\jpabook\ch08-model3\src\main\java" />
       <recent name="C:\Users\USER\IdeaProjects\jpabook\images" />
       <recent name="$PROJECT_DIR$/images" />
-      <recent name="$PROJECT_DIR$/ch03_model1/src/main/resources" />
-      <recent name="$PROJECT_DIR$/ch11-model2/src/main/resources" />
-      <recent name="$PROJECT_DIR$/ch11-model2/src/main/java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="hellojpa" />
@@ -413,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686217446334</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="프록시 활용 정리 추가">
+      <created>1686783733563</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1686783733563</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,7 +442,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="값 타입과 불변 객체 학습 추가" />
     <MESSAGE value="이미지 경로 수정" />
     <MESSAGE value="값 타입 컬렉션 학습 추가" />
     <MESSAGE value="값 타입 컬렉션 학습 추가 #2" />
@@ -456,6 +466,7 @@
     <MESSAGE value="JPQL 벌크 연산 학습 추가" />
     <MESSAGE value="영속성 컨텍스트 1 (비영속,영속) 학습 추가" />
     <MESSAGE value="영속성 컨텍스트 1 (비영속,영속) 학습 추가 #2" />
-    <option name="LAST_COMMIT_MESSAGE" value="영속성 컨텍스트 1 (비영속,영속) 학습 추가 #2" />
+    <MESSAGE value="프록시 활용 정리 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="프록시 활용 정리 추가" />
   </component>
 </project>

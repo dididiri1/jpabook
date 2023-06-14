@@ -19,41 +19,21 @@ public class JpaMain {
 
         try{
 
-            Team team = new Team();
-            team.setName("A");
+            Child child1 = new Child();
+            Child child2 = new Child();
 
-            em.persist(team);
+            Parent parent = new Parent();
+            parent.addChild(child1);
+            parent.addChild(child2);
 
-            Member member1 = new Member();
-            member1.setUsername("member1");
-            member1.setTeam(team);
-
-            em.persist(member1);
-
-
-            em.flush();
-            em.clear();
-
-            /* 테스트 1
-
-            Member m = em.find(Member.class, member1.getId());
-
-            System.out.println("m.getTeam().getClass() = " + m.getTeam().getClass());
-
-            System.out.println("========");
-            m.getTeam().getName();
-            System.out.println("========");
-
-            */
-
-            // 테스트 2
-            List<Member> members = em.createQuery("select m from Member m join fetch m.team", Member.class)
-                    .getResultList();
+            em.persist(parent);
+            em.persist(child1);
+            em.persist(child2);
 
             tx.commit();
         } catch (Exception e) {
             tx.rollback();
-            e.printStackTrace(); //이 부분을 추가하면 예외를 확인할 수 있습니다.
+            e.printStackTrace();
         } finally {
             em.close();
         }

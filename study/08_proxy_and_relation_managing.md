@@ -155,3 +155,104 @@
   
 ```
 
+### 예제
+
+- Parent
+
+``` java
+
+  @Entity
+  @Getter @Setter
+  public class Parent {
+  
+      @Id @GeneratedValue
+      private Long id;
+  
+      private String name;
+  
+      @OneToMany(mappedBy = "parent")
+      private List<Child> childList = new ArrayList<>();
+  
+      public void addChild(Child child) {
+          childList.add(child);
+          child.setParent(this);
+      }
+  }
+
+```
+
+- Child
+
+``` java
+
+  @Entity
+  @Getter @Setter
+  public class Child {
+  
+      @Id @GeneratedValue
+      private Long id;
+  
+      private String name;
+  
+      @ManyToOne
+      @JoinColumn(name = "parent_id")
+      private Parent parent;
+  }
+  
+```
+
+``` java
+  public static void main(String[] args) {
+
+      EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
+      
+      ...
+
+      try{
+          Child child1 = new Child();
+          Child child2 = new Child();
+
+          Parent parent = new Parent();
+          parent.addChild(child1);
+          parent.addChild(child2);
+
+          em.persist(parent);
+          em.persist(child1);
+          em.persist(child2);
+
+          tx.commit();
+          
+      } catch (Exception e) {
+      
+      ...
+  }
+``` 
+
+- cascade 추가
+  - 추가시 Parent만 persist 하면 자식은 전이 된다.
+
+
+``` java
+  
+  @Entity
+  @Getter
+  @Setter
+  public class Parent {
+  
+      @Id
+      @GeneratedValue(strategy = GenerationType.IDENTITY)
+      private Long id;
+  
+      private String name;
+  
+      @OneToMany(mappedBy = "parent", cascade = CascadeType.ALL) //cascade 추가
+      private List<Child> children = new ArrayList<>();
+  
+      public void addChild(Child child) {
+          this.children.add(child);
+          child.setParent(this);
+      }
+  }
+  
+``` 
+
