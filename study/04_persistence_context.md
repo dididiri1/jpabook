@@ -124,3 +124,57 @@ Hibernate:
 result = true
 
 ``` 
+
+### 엔티티 등록 - 트랜잭션을 지원하는 쓰기 지연
+
+- tx.commit() 하게 되면, flush() 와 commit() 가 일어난다.
+
+``` java
+  EntityManager em = emf.createEntityManager();
+  EntityTransaction transaction = em.getTransaction();
+  // 엔티티 매니저는 데이터 변경시 트랜잭션을 시작해야 한다.
+  transaction.begin(); // 트랜잭션 시작
+  
+  em.persist(memberA);
+  em.persist(memberB);
+  // 이때까지 INSERT SQL을 데이터베이스에 보내지 않는다.
+  
+  // 커밋하는 순간 데이터베이스에 INSERT SQL을 보낸다.
+  transaction.commit(); // 트랜잭션 커밋
+``` 
+
+- 사이즈 만큼 모아서 한방에 처리하거 쿼리를 보내고 commit 됨
+
+``` java
+  <property name="hibernate.jdbc.batch_size" value=10/>
+``` 
+
+### 엔티티 수정 - 변경감지(Dirty Checking)
+
+``` java
+  EntityManager em = emf.createEntityManager();
+  EntityTransaction transaction = em.getTransaction();
+  transaction.begin(); // 트랜잭션 시작
+  
+  // 영속 엔티티 조회
+  Member memberA = em.find(Member.class, "memberA");
+  
+  // 영속 엔티티 수정
+  memberA.setUsername("nj");
+  memberA.setAge(27);
+  
+  //em.update(member) 또는 em.persist(member)로 다시 저장해야 하지 않을까?
+  
+  transaction.commit(); // 트랜잭션 커밋
+``` 
+
+- update할때는 persist() 할 필요 없음 
+- commit()또는 flush()가 일어날 때 1차 캐시에 있는 엔티티와 스냅샷을 다 비교함, 비교해서 바뀌면 데이터에 반영하고 commit 함
+
+![](https://github.com/dididiri1/jpabook/blob/main/images/03_06.png?raw=true)
+
+``` java
+  Member memberA = em.find(Member.class, "memberA");
+
+  em.remove(memberA); // 엔티티 삭제
+``` 
