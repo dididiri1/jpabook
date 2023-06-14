@@ -22,7 +22,7 @@
 * [섹션 7. 고급 매핑](https://github.com/dididiri1/jpabook/blob/main/ch07-model1/README.md)
 
 
-* [섹션 8. 프록시와 연관관계 관리](https://github.com/dididiri1/jpabook/blob/main/ch08-model1/README.md)
+* [섹션 8. 프록시와 연관관계 관리](https://github.com/dididiri1/jpabook/blob/main/study/08_proxy_and_relation_managing.md)
 
 
 * [섹션 9. 값 타입](https://github.com/dididiri1/jpabook/blob/main/study/09_value_type.md)
