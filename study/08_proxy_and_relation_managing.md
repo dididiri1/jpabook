@@ -73,16 +73,16 @@
 ### 프록시 확인
 
 - 프록시 인스턴스의 초기화 여부 확인
-    - PersistenceUnitUtil.isLoaded(Object entity)
+  - PersistenceUnitUtil.isLoaded(Object entity)
 
 - 프록시 클래스 확인 방법
-    - entity.getClass().getName() 출력 (..javasist.. or HibernateProxy...)
+  - entity.getClass().getName() 출력 (..javasist.. or HibernateProxy...)
 
 - 프록시 강제 초기화
-    - org.hibernate.Hibernate.initialize(entity);
+  - org.hibernate.Hibernate.initialize(entity);
 
 - 참고: JPA 표준은 강제 초기화 없음
-    - 강제 호출: **member.getName()**
+  - 강제 호출: **member.getName()**
 
 ## 즉시 로딩과 지연 로딩
 
@@ -120,7 +120,7 @@
 - **즉시 로딩은 JPQL에서 N+1 문제를 일으킨다.**
 - **@ManyToOne, @OneToOne은 기본이 즉시 로딩임<br>-> LAZY로 항상 설정해야됨**
 - @OneToMany, @ManayToMany는 기본이 지연 로딩
-  
+
 ### 지연 로딩 활용
 
 - **Member**와 **Team**은 자주 함께 사용 -> **즉시 로딩**
@@ -256,3 +256,96 @@
   
 ``` 
 
+### 영속성 전이: CASCADE - 주의!
+
+- 영속성 전이는 연관관계를 매핑하는 것과 아무 관련이 없음
+- 엔티티를 영속화할 때 연관된 엔티티도 함께 영속화하는 편리함 을 제공할 뿐
+
+- CASCADE의 종류
+  - **ALL: 모두 적용**
+  - **PERSIST: 영속**
+  - **REMOVE: 삭제**
+  - MERGE: 병합
+  - REFRESH: REFRESH
+  - DETACH: DETACH
+
+## 고아 객체
+
+### 고아 객체
+
+- 고아 객체 제거:부모 엔티티와 연관관계가 끊어진 자식 엔티티를 자동으로 삭제
+
+- **orphanRemoval = true**
+
+``` java
+
+  @Entity
+  @Getter @Setter
+  public class Parent {
+
+    ...
+
+    @OneToMany(mappedBy = "parent", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Child> childList = new ArrayList<>();
+
+    public List<Child> getChildList() {
+        return childList;
+    }
+
+    ...
+}
+
+``` 
+
+``` java
+
+  Child child1 = new Child();
+  Child child2 = new Child();
+
+  Parent parent = new Parent();
+  parent.addChild(child1);
+  parent.addChild(child2);
+
+  em.persist(parent);
+
+  em.flush();
+  em.clear();
+
+  Parent findParent = em.find(Parent.class, parent.getId());
+  findParent.getChildList().remove(0);
+  
+``` 
+
+``` log
+Hibernate: 
+    select
+        parent0_.id as id1_1_0_,
+        parent0_.name as name2_1_0_ 
+    from
+        Parent parent0_ 
+    where
+        parent0_.id=?
+Hibernate: 
+    select
+        childlist0_.parent_id as parent_i3_0_0_,
+        childlist0_.id as id1_0_0_,
+        childlist0_.id as id1_0_1_,
+        childlist0_.name as name2_0_1_,
+        childlist0_.parent_id as parent_i3_0_1_ 
+    from
+        Child childlist0_ 
+    where
+        childlist0_.parent_id=?
+Hibernate: 
+    /* delete hellojpa.Child */ delete 
+        from
+            Child 
+        where
+            id=?
+``` 
+
+- delete from Child where id = ?
+
+### 고아 객체 - 주의
+
+- 참조가 제거된 엔티티는 다른 곳에서 참조하지 않는 고아 객체
