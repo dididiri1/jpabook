@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db6a5f0e-d9e8-4cd8-8c50-341a8d706bd3" name="Changes" comment="고아 객체 활용 정리 추가">
-      <change afterPath="$PROJECT_DIR$/images/05_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/05_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study/06_relational_mapping.md" afterDir="false" />
+    <list default="true" id="db6a5f0e-d9e8-4cd8-8c50-341a8d706bd3" name="Changes" comment="연관관계 매핑 기초 정리 추가">
+      <change afterPath="$PROJECT_DIR$/images/05_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/05_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/05_05.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch05-model1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ch05-model1/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study/06_relational_mapping.md" beforeDir="false" afterPath="$PROJECT_DIR$/study/06_relational_mapping.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +178,7 @@
       <workItem from="1686216878404" duration="1168000" />
       <workItem from="1686297645561" duration="686000" />
       <workItem from="1687165657223" duration="1571000" />
-      <workItem from="1687349826239" duration="657000" />
+      <workItem from="1687349826239" duration="1277000" />
     </task>
     <task id="LOCAL-00001" summary="ch07 model1 add">
       <created>1685505369907</created>
@@ -432,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687167223154</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="연관관계 매핑 기초 정리 추가">
+      <created>1687350502725</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1687350502725</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +457,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="값 타입 컬렉션 학습 추가 #2" />
     <MESSAGE value="JQPL, Criteria, QuertDSL, 네이티브 SQL 소개" />
     <MESSAGE value="JQPL, Criteria, QuertDSL, 네이티브 SQL 소개 #1" />
     <MESSAGE value="JPQL 기본문법 학습 추가" />
@@ -475,6 +481,7 @@
     <MESSAGE value="프록시 활용 정리 추가" />
     <MESSAGE value="영속성 전이: CASCADE 활용 정리 추가" />
     <MESSAGE value="고아 객체 활용 정리 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="고아 객체 활용 정리 추가" />
+    <MESSAGE value="연관관계 매핑 기초 정리 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="연관관계 매핑 기초 정리 추가" />
   </component>
 </project>
