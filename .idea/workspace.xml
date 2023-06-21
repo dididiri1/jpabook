@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db6a5f0e-d9e8-4cd8-8c50-341a8d706bd3" name="Changes" comment="영속성 전이: CASCADE 활용 정리 추가">
-      <change afterPath="$PROJECT_DIR$/ch08-model2/src/main/java/hellojpa/JpaMain3.java" afterDir="false" />
+    <list default="true" id="db6a5f0e-d9e8-4cd8-8c50-341a8d706bd3" name="Changes" comment="고아 객체 활용 정리 추가">
+      <change afterPath="$PROJECT_DIR$/images/05_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/05_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study/06_relational_mapping.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/08_proxy_and_relation_managing.md" beforeDir="false" afterPath="$PROJECT_DIR$/study/08_proxy_and_relation_managing.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05-model1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ch05-model1/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,36 +44,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/USER/IdeaProjects/jpabook/ch08-model3/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "C:/Users/USER/IdeaProjects/jpabook/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="jpql" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\IdeaProjects\jpabook\images" />
+      <recent name="C:\Users\USER\IdeaProjects\jpabook\study" />
       <recent name="C:\Users\USER\IdeaProjects\jpabook\ch08-model3\src\main\resources" />
       <recent name="C:\Users\USER\IdeaProjects\jpabook\ch08-model3" />
       <recent name="C:\Users\USER\IdeaProjects\jpabook\ch08-model3\src\main\java" />
-      <recent name="C:\Users\USER\IdeaProjects\jpabook\images" />
-      <recent name="$PROJECT_DIR$/images" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="hellojpa" />
@@ -175,7 +177,8 @@
       <workItem from="1686215706164" duration="1167000" />
       <workItem from="1686216878404" duration="1168000" />
       <workItem from="1686297645561" duration="686000" />
-      <workItem from="1687165657223" duration="1535000" />
+      <workItem from="1687165657223" duration="1571000" />
+      <workItem from="1687349826239" duration="657000" />
     </task>
     <task id="LOCAL-00001" summary="ch07 model1 add">
       <created>1685505369907</created>
@@ -422,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687166633591</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="고아 객체 활용 정리 추가">
+      <created>1687167223154</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1687167223154</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,7 +450,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="값 타입 컬렉션 학습 추가" />
     <MESSAGE value="값 타입 컬렉션 학습 추가 #2" />
     <MESSAGE value="JQPL, Criteria, QuertDSL, 네이티브 SQL 소개" />
     <MESSAGE value="JQPL, Criteria, QuertDSL, 네이티브 SQL 소개 #1" />
@@ -465,6 +474,7 @@
     <MESSAGE value="영속성 컨텍스트 1 (비영속,영속) 학습 추가 #2" />
     <MESSAGE value="프록시 활용 정리 추가" />
     <MESSAGE value="영속성 전이: CASCADE 활용 정리 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="영속성 전이: CASCADE 활용 정리 추가" />
+    <MESSAGE value="고아 객체 활용 정리 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="고아 객체 활용 정리 추가" />
   </component>
 </project>
