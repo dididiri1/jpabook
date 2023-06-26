@@ -14,7 +14,10 @@ public abstract class BaseEntity {
 
     @Column(name = "INSERT_MEMBER")
     private String createdBy;
+
     private LocalDateTime createDate;
+
     private String lastModifiedBy;
+
     private LocalDateTime lastModifiedDate;
 }

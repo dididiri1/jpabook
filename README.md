@@ -9,16 +9,19 @@
 **자바 ORM 표준 JPA 프로그래밍 - 기본편 / By. 김영한**
 
 
-* [섹션 3. 영속성 관리 - 내부 동작 방식](https://github.com/dididiri1/jpabook/blob/main/study/04_persistence_context.md)
+* [섹션 3. 영속성 관리 - 내부 동작 방식](https://github.com/dididiri1/jpabook/blob/main/study/03_persistence_context.md)
 
 
-* [섹션 5. 엔티티 매핑](https://github.com/dididiri1/jpabook/tree/main/ch05-model1/README.md)
+* [섹션 4. 엔티티 매핑](https://github.com/dididiri1/jpabook/blob/main/study/04_entity_mapping.md)
+
+
+* [섹션 5. 연관관계 매핑 기초](https://github.com/dididiri1/jpabook/blob/main/study/05_relational_mapping_basic.md)
 
 
 * [섹션 6. 다양한 연관관계 매핑](https://github.com/dididiri1/jpabook/blob/main/study/06_relational_mapping.md)
 
 
-* [섹션 7. 고급 매핑](https://github.com/dididiri1/jpabook/blob/main/ch07-model1/README.md)
+* [섹션 7. 고급 매핑](https://github.com/dididiri1/jpabook/blob/main/study/07_advanced_mapping.md)
 
 
 * [섹션 8. 프록시와 연관관계 관리](https://github.com/dididiri1/jpabook/blob/main/study/08_proxy_and_relation_managing.md)
@@ -31,4 +34,8 @@
 
 
 * [섹션 11. 객체지향 쿼리 언어2 - 중급 문법](https://github.com/dididiri1/jpabook/blob/main/study/11_jpql_2.md)
+
+### Reference
+
+- [자바 ORM 표준 JPA 프로그래밍](https://www.inflearn.com/course/ORM-JPA-Basic)
 

@@ -19,5 +19,4 @@ public class Member extends BaseEntity{
     @Column(name = "USERNAME")
     private String username;
 
-
 }
