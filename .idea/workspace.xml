@@ -4,11 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db6a5f0e-d9e8-4cd8-8c50-341a8d706bd3" name="Changes" comment="TIL 학습 정리">
-      <change afterPath="$PROJECT_DIR$/images/05_06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/05_07.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/05_relational_mapping_basic.md" beforeDir="false" afterPath="$PROJECT_DIR$/study/05_relational_mapping_basic.md" afterDir="false" />
+    <list default="true" id="db6a5f0e-d9e8-4cd8-8c50-341a8d706bd3" name="Changes" comment="연관관계 매핑 기초 학습 정리">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05-model1/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05-model1/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05-model1/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05-model1/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06-model1/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06-model1/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06-model1/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06-model2/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06-model2/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06-model2/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06-model3/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch07-model1/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch07-model2/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch07-model2/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch07-model3/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch11-model3/.gitignore" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +193,7 @@
       <workItem from="1687349826239" duration="1357000" />
       <workItem from="1687682038275" duration="4327000" />
       <workItem from="1687747712115" duration="3384000" />
-      <workItem from="1687832290552" duration="326000" />
+      <workItem from="1687832290552" duration="776000" />
     </task>
     <task id="LOCAL-00001" summary="ch07 model1 add">
       <created>1685505369907</created>
@@ -469,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687750424551</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="연관관계 매핑 기초 학습 정리">
+      <created>1687832816937</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1687832816937</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="프로젝션(SELECT) 학습 추가" />
     <MESSAGE value="프로젝션(SELECT) 학습 추가 #2" />
     <MESSAGE value="페이지 API 학습 추가" />
     <MESSAGE value="조인 학습 추가" />
@@ -512,6 +531,7 @@
     <MESSAGE value="엔티티 매핑 학습 정리 추가" />
     <MESSAGE value="엔티티 매핑 학습 정리 추가 #2" />
     <MESSAGE value="TIL 학습 정리" />
-    <option name="LAST_COMMIT_MESSAGE" value="TIL 학습 정리" />
+    <MESSAGE value="연관관계 매핑 기초 학습 정리" />
+    <option name="LAST_COMMIT_MESSAGE" value="연관관계 매핑 기초 학습 정리" />
   </component>
 </project>
