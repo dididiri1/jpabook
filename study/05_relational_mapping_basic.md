@@ -220,3 +220,62 @@
   FROM TEAM T
   JOIN MEMBER M ON T.TEAM_ID = M.TEAM_ID
 ``` 
+### 둘 중 하나로 외래 키를 관리해야 한다.
+
+![](https://github.com/dididiri1/jpabook/blob/main/images/05_06.png?raw=true)
+
+### 연관관계의 주인(Owner)
+***양방향 매핑 규칙***
+
+- 객체의 두 관계중 하나를 연관관계의 주인으로 지정
+- 연관관계의 주인만이 외래 키를 관리(등록, 수정)
+- 주인이 아닌쪽은 읽기만 가능
+- 주인은 mappedBy 속성 사용X
+- 주인이 아니면 mappedBy 속성으로 주인 지정
+
+### 누구를 주인으로?
+- 외래 키가 있는 있는 곳을 주인으로 정해라
+- 여기서는 Member.team이 연관관계의 주인
+
+![](https://github.com/dididiri1/jpabook/blob/main/images/05_07.png?raw=true)
+
+### 양방향 매핑시 가장 많이 하는 실수
+
+- 연관관계의 주인에 값을 입력하지 않음
+- 연관관계의 주인을 Member.team으로 잡아놓고, Team의 members에만 연관관계를 설정한다.
+- 인이 아닌 mappdBy가 설정 되어있는 Team의 members는 조회 권한만 가지고 있고, DB에 영향을 주지 못한다.
+
+``` java
+Team team = new Team();
+team.setName("TeamA");
+em.persist(team);
+
+Member member = new Member();
+member.setName("member1");
+
+//역방향(주인이 아닌 방향)만 연관관계 설정
+team.getMembers().add(member);
+
+em.persist(member);
+``` 
+
+### 양방향 연관관계 주의 - 실습
+- **순수 객체 상태를 고려해서 항상 양쪽에 값을 설정하자**
+- 연관관계 편의 메소드를 생성하자
+- 양방향 매핑시에 무한 루프를 조심하자
+  - 예: toString(), lombok, JSON 생성 라이브러리
+
+### 양방향 매핑 정리
+- **단방향 매핑만으로도 이미 연관관계 매핑은 완료**
+- 양방향 매핑은 반대 방향으로 조회(객체 그래프 탐색) 기능이 추가된 것 뿐
+- JPQL에서 역방향으로 탐색할 일이 많음
+- 단방향 매핑을 잘 하고 양방향은 필요할 때 추가해도 됨(테이블에 영향을 주지 않음)
+
+### 연관관계의 주인을 정하는 기준
+- 비즈니스 로직을 기준으로 연관관계의 주인을 선택하면 안됨
+- 연관관계의 주인은 외래 키의 위치를 기준으로 정해야함
+
+
+
+
+
