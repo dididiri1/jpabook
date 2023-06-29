@@ -153,8 +153,6 @@
 
 ![](https://github.com/dididiri1/jpabook/blob/main/images/09_04.png?raw=true)
 
-
-
 ``` java
    
    Address address = new Address("city", "street", "10000");
@@ -177,8 +175,6 @@
    member1.getHomeAddress().setCity("newCity");  
     
 ```
-
-
 
 ## 참고사항
 * 같은 객체 사용하면 공유되서 수정하면 같이 수정되는 버그가 있음

@@ -8,6 +8,9 @@
 
 **자바 ORM 표준 JPA 프로그래밍 - 기본편**
 
+* [섹션 3. JPA 시작하기](https://github.com/dididiri1/jpabook/blob/main/study/02_jpa_start.md)
+
+
 * [섹션 3. 영속성 관리 - 내부 동작 방식](https://github.com/dididiri1/jpabook/blob/main/study/03_persistence_context.md)
 
 

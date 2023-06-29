@@ -8,29 +8,30 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ch10-model8" />
-        <module name="ch09-model1" />
-        <module name="ch08-model2" />
         <module name="ch10-model4" />
-        <module name="ch08-model1" />
-        <module name="ch07-model1" />
         <module name="ch10-model5" />
-        <module name="ch07-model2" />
-        <module name="ch09-model2" />
         <module name="ch10-model6" />
-        <module name="ch07-model3" />
-        <module name="ch09-model3" />
         <module name="ch10-model7" />
-        <module name="ch08-model3" />
         <module name="ch11-model2" />
-        <module name="ch03_model1" />
         <module name="ch10-model1" />
         <module name="ch11-model1" />
         <module name="ch10-model2" />
         <module name="ch10-model3" />
         <module name="ch06-model3" />
         <module name="ch06-model2" />
+        <module name="ch02-model1" />
         <module name="ch06-model1" />
         <module name="ch05-model1" />
+        <module name="ch09-model1" />
+        <module name="ch08-model2" />
+        <module name="ch08-model1" />
+        <module name="ch07-model1" />
+        <module name="ch07-model2" />
+        <module name="ch09-model2" />
+        <module name="ch07-model3" />
+        <module name="ch09-model3" />
+        <module name="ch08-model3" />
+        <module name="ch03_model1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
