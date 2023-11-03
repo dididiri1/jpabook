@@ -483,4 +483,8 @@ Hibernate:
   * 벌크 연산을 먼저 실행
   * **벌크 연산 수행 후 영속성 컨텍스트 초기화**
 
+### Reference
+
+* [자바 ORM 표준 JPA 프로그래밍](https://www.inflearn.com/course/ORM-JPA-Basic)
+
 * [실습 코드 커밋 로그](https://github.com/dididiri1/jpabook/commit/4965c4b10d72c5ba052fd39c99085278b35b099a)

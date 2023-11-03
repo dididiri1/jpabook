@@ -133,3 +133,9 @@ public abstract class BaseEntity {
 
 > 참고: @Entity 클래스는 엔티티나 @MappedSuperclass로  
 > 지정한 클래스만 상속 가능
+
+
+### Reference
+
+- [자바 ORM 표준 JPA 프로그래밍](https://www.inflearn.com/course/ORM-JPA-Basic)
+

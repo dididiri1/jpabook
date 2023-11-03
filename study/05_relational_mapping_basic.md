@@ -276,6 +276,9 @@ em.persist(member);
 - 연관관계의 주인은 외래 키의 위치를 기준으로 정해야함
 
 
+### Reference
+
+- [자바 ORM 표준 JPA 프로그래밍](https://www.inflearn.com/course/ORM-JPA-Basic)
 
 
 

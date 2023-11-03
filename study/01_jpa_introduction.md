@@ -49,6 +49,9 @@
 - 트랜잭션을 지원하는 쓰기 지연(transactional write-behind)
 - 지연 로딩(Lazy Loading)
 
+### Reference
+
+- [자바 ORM 표준 JPA 프로그래밍](https://www.inflearn.com/course/ORM-JPA-Basic)
 
 
 

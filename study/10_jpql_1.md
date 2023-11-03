@@ -721,3 +721,8 @@ WHERE m.username = t.name
     select function ('group_concat', i.name) from Item i
   
 ```
+
+
+### Reference
+
+- [자바 ORM 표준 JPA 프로그래밍](https://www.inflearn.com/course/ORM-JPA-Basic)

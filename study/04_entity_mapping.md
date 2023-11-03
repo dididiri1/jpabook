@@ -173,6 +173,9 @@ private Long id;
 - 객체 그래프 탐색이 불가능
 - 참조가 없으므로 UML도 잘못됨
 
+### Reference
+
+- [자바 ORM 표준 JPA 프로그래밍](https://www.inflearn.com/course/ORM-JPA-Basic)
 
 
 

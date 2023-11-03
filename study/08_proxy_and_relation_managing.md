@@ -427,3 +427,7 @@ Hibernate:
 - 스스로 생명주기를 관리하는 엔티티는 em.persist()로 영속화, em.remove()로 제거
 - 두 옵션을 모두 활성화 하면 부모 엔티티를 통해서 자식의 생명주기를 관리할 수 있음
 - 도메인 주도 설계(DDD)의 Aggregate Root 개념을 구현할 때 유용
+
+### Reference
+
+- [자바 ORM 표준 JPA 프로그래밍](https://www.inflearn.com/course/ORM-JPA-Basic)

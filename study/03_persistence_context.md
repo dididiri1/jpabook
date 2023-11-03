@@ -178,3 +178,7 @@ result = true
 
   em.remove(memberA); // 엔티티 삭제
 ``` 
+
+### Reference
+
+- [자바 ORM 표준 JPA 프로그래밍](https://www.inflearn.com/course/ORM-JPA-Basic)

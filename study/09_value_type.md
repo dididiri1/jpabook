@@ -303,3 +303,8 @@ public class ValueMain {
 ### 결론
 
 * 쓰면 안됨. 진짜 간단하고 단순하고 값이 바꼈도 상관없을때 값 타입 컬렉션 씀.
+
+
+### Reference
+
+- [자바 ORM 표준 JPA 프로그래밍](https://www.inflearn.com/course/ORM-JPA-Basic)
